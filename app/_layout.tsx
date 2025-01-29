@@ -1,13 +1,9 @@
-import React, { useEffect } from "react";
-import { View, Text } from "react-native";
-import Splashscreen from "./splashscreen";
-export default function home() {
-  const [isReady, setIsReady] = React.useState(true);
-  useEffect(() => {
-    setTimeout(() => {
-      console.log("passedsplashscreen");
-      setIsReady(false);
-    }, 3000);
-  });
-  return <>{isReady ? <Splashscreen /> : <Text>Passedsplashscreen</Text>}</>;
+import { Stack } from "expo-router";
+export default function RootLayout() {
+  return (
+    <Stack screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="(tabs)" />
+      <Stack.Screen name="login" />
+    </Stack>
+  );
 }
