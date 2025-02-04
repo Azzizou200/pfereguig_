@@ -6,6 +6,7 @@ export default function HomeScreen() {
   return (
     <View>
       <Text>Hello, this is the Index component!</Text>
+      <Redirect href="/login" />
     </View>
   );
 }

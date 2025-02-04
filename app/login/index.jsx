@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
   View,
   Text,
@@ -9,9 +10,8 @@ import {
 } from "react-native";
 
 import { LinearGradient } from "expo-linear-gradient";
-import { useRouter } from "expo-router";
+
 export default function LoginScreen() {
-  const router = useRouter();
   return (
     <ImageBackground
       style={styles.container}
@@ -29,10 +29,7 @@ export default function LoginScreen() {
       <Text style={{ color: "gray", marginTop: 20 }}>
         Start your journey with us
       </Text>
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => router.replace("signIn")}
-      >
+      <TouchableOpacity style={styles.button}>
         <Text style={{ color: "#000", TextAlign: "center" }}>Get Started</Text>
       </TouchableOpacity>
     </ImageBackground>
